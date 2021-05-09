@@ -6,23 +6,153 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:LotkaVolterraApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" WindowStyle="None" 
-        
+        Title="MainWindow" Height="350" Width="800" WindowStyle="None" 
+        ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen" AllowsTransparency="True"
         Background="{x:Null}">
     <Grid>
-
-        <materialDesign:Card Margin="10" Background="#050843" UniformCornerRadius="40">
+        <materialDesign:Card Margin="10" Background="#050843" UniformCornerRadius="40" MouseDown="Card_MouseDown">
             <StackPanel >
+                <StackPanel.Background>
+                    <ImageBrush ImageSource="/Asset/Images/Wolf.png" Stretch="Uniform" AlignmentX="Right" AlignmentY="Bottom"/>
+                </StackPanel.Background>
+
                 <Grid>
-                    <Button Background="{x:Null}" Style="{StaticResource BtnNavi}"
-                            HorizontalAlignment="Right" x:Name="BtnMinimalize">
-                        <StackPanel Orientation="Horizontal">
-                        </StackPanel>
+                    <Button Background="{x:Null}" Style="{StaticResource btnNavi}"
+                            HorizontalAlignment="Right" x:Name="btnClose" Margin="0,5,25,0" 
+                            Click="btnClose_Click">
+                        <materialDesign:PackIcon Kind="WindowClose"/>
+                    </Button>
+                    <Button Background="{x:Null}" Style="{StaticResource btnNavi}"
+                            HorizontalAlignment="Right" x:Name="BtnMinimalize" Margin="0,5,60,0"
+                            Click="BtnMinimalize_Click">
+                        <materialDesign:PackIcon Kind="WindowMinimize"/>
                     </Button>
                 </Grid>
+
+                <TextBlock HorizontalAlignment="Center" Text="Lotka Volterra" Style="{StaticResource TitleText}"/>
+
+                <Grid Margin="50,20,50,20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.2*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="0.2*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="0.2*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right"
+                                Margin="0,0,5,0">
+                        <TextBlock Style="{DynamicResource BaseText}" Text="N"
+                                  VerticalAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Horizontal" >
+                        <materialDesign:Card Style="{StaticResource TextBoxCard}">
+                            <TextBox Width="100" Padding="2"/>
+                        </materialDesign:Card>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="2" Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right"
+                                Margin="0,0,5,0">
+                        <TextBlock Style="{DynamicResource BaseText}" Text="r"
+                                  VerticalAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="3" Grid.Row="0" Orientation="Horizontal" >
+                        <materialDesign:Card Style="{StaticResource TextBoxCard}">
+                            <TextBox Width="100" Padding="2"/>
+                        </materialDesign:Card>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="4" Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right"
+                                Margin="0,0,5,0">
+                        <TextBlock Style="{DynamicResource BaseText}" Text="dt"
+                                  VerticalAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="5" Grid.Row="0" Orientation="Horizontal" >
+                        <materialDesign:Card Style="{StaticResource TextBoxCard}">
+                            <TextBox Width="100" Padding="2"/>
+                        </materialDesign:Card>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right"
+                                Margin="0,0,5,0">
+                        <TextBlock Style="{DynamicResource BaseText}" Text="pk"
+                                  VerticalAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" >
+                        <materialDesign:Card Style="{StaticResource TextBoxCard}">
+                            <TextBox Width="100" Padding="2"/>
+                        </materialDesign:Card>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="2" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right"
+                                Margin="0,0,5,0">
+                        <TextBlock Style="{DynamicResource BaseText}" Text="a"
+                                  VerticalAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="3" Grid.Row="1" Orientation="Horizontal" >
+                        <materialDesign:Card Style="{StaticResource TextBoxCard}">
+                            <TextBox Width="100" Padding="2"/>
+                        </materialDesign:Card>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="4" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right"
+                                Margin="0,0,5,0">
+                        <TextBlock Style="{DynamicResource BaseText}" Text="ab"
+                                  VerticalAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="5" Grid.Row="1" Orientation="Horizontal" >
+                        <materialDesign:Card Style="{StaticResource TextBoxCard}">
+                            <TextBox Width="100" Padding="2"/>
+                        </materialDesign:Card>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="0" Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right"
+                                Margin="0,0,5,0">
+                        <TextBlock Style="{DynamicResource BaseText}" Text="s"
+                                  VerticalAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="1" Grid.Row="2" Orientation="Horizontal" >
+                        <materialDesign:Card Style="{StaticResource TextBoxCard}">
+                            <TextBox Width="100" Padding="2"/>
+                        </materialDesign:Card>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="2" Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right"
+                                Margin="0,0,5,0">
+                        <TextBlock Style="{DynamicResource BaseText}" Text="p0"
+                                  VerticalAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="3" Grid.Row="2" Orientation="Horizontal" >
+                        <materialDesign:Card Style="{StaticResource TextBoxCard}">
+                            <TextBox Width="100" Padding="2"/>
+                        </materialDesign:Card>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="4" Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right"
+                                Margin="0,0,5,0">
+                        <TextBlock Style="{DynamicResource BaseText}" Text="v0"
+                                  VerticalAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="5" Grid.Row="2" Orientation="Horizontal" >
+                        <materialDesign:Card Style="{StaticResource TextBoxCard}">
+                            <TextBox Width="100" Padding="2"/>
+                        </materialDesign:Card>
+                    </StackPanel>
+                </Grid>
+
             </StackPanel>
         </materialDesign:Card>
-
     </Grid>
+
 </Window>

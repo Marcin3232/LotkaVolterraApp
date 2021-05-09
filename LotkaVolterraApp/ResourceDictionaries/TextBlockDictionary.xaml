@@ -1,0 +1,15 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style TargetType="TextBlock" x:Key="TitleText">
+        <Setter Property="FontSize" Value="36"/>
+        <Setter Property="Foreground" Value="AliceBlue"/>
+        <Setter Property="FontFamily" Value="ItalicT"/>
+    </Style>
+
+    <Style TargetType="TextBlock" x:Key="BaseText">
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Foreground" Value="AliceBlue"/>
+        <Setter Property="FontFamily" Value="ItalicT"/>
+    </Style>
+</ResourceDictionary>

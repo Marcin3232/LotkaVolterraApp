@@ -1,0 +1,9 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Color x:Key="DarkBlue">#050843</Color>
+    <Color x:Key="NiceBlue">#9BE1F3</Color>
+    
+    <SolidColorBrush x:Key="TextBoxFill" Color="{StaticResource NiceBlue}"/>
+    <SolidColorBrush x:Key="BackgroundMainCard" Color="{StaticResource DarkBlue}"/>
+</ResourceDictionary>
