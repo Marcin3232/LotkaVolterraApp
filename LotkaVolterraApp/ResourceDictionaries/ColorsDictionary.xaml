@@ -3,7 +3,9 @@
 
     <Color x:Key="DarkBlue">#050843</Color>
     <Color x:Key="NiceBlue">#9BE1F3</Color>
+    <Color x:Key="ShadowBlue">#FF8C90EE</Color>
     
     <SolidColorBrush x:Key="TextBoxFill" Color="{StaticResource NiceBlue}"/>
     <SolidColorBrush x:Key="BackgroundMainCard" Color="{StaticResource DarkBlue}"/>
+    <SolidColorBrush x:Key="MouseDownInputText" Color="{StaticResource ShadowBlue}"/>
 </ResourceDictionary>
