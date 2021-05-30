@@ -1,13 +1,10 @@
 ﻿using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LotkaVolterra.Python
 {
-   public class PythonPath
+    public class PythonPath
     {
         private string possibleLocation1 = @"HKLM\SOFTWARE\Python\PythonCore\";
         private string possibleLocation2 = @"HKCU\SOFTWARE\Python\PythonCore\";
@@ -18,7 +15,6 @@ namespace LotkaVolterra.Python
             List<string> possiblePythonLocation = PossiblePathLocation();
             Dictionary<string, string> pythonLocation = PythonLocation(possiblePythonLocation);
             return GetHighestVersion(pythonLocation);
-
         }
 
         private List<string> PossiblePathLocation()
@@ -62,7 +58,6 @@ namespace LotkaVolterra.Python
                             }
                             catch (Exception e)
                             {
-
                             }
                         }
                     }
@@ -75,7 +70,6 @@ namespace LotkaVolterra.Python
         private string GetHighestVersion(Dictionary<string, string> pythonLocation, string requiredVersion = "",
             string maxVersion = "")
         {
-
             if (pythonLocation.Count > 0)
             {
                 System.Version desiredVersion = new System.Version(requiredVersion == "" ? "0.0.1" : requiredVersion),

@@ -1,18 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LotkaVolterra.Python
+﻿namespace LotkaVolterra.Python
 {
-    class PythonScriptRunner
+    internal class PythonScriptRunner
     {
         public void RunPython()
         {
-
         }
-
-
     }
 }

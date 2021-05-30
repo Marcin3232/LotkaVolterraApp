@@ -57,7 +57,6 @@ namespace LotkaVolterraApp
                 UseShellExecute = false,
                 CreateNoWindow = true,
                 RedirectStandardError = true,
-
             };
             p.Start();
 

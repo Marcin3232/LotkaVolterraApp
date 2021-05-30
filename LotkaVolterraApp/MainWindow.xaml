@@ -161,7 +161,19 @@
 
                     <StackPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal">
                         <Button Style="{StaticResource MaterialDesignRaisedButton}" Background="#FF6639B8" Width="114"
-                                Content="Simulate" Margin="10,0,0,0" BorderBrush="#FF5F93F0" Click="Button_Click"/>
+                                Content="Simulate" Margin="10,10,0,0" BorderBrush="#FF6639B8" Click="Button_Click"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="3" Grid.Row="3" Orientation="Horizontal">
+
+                        <CheckBox Margin="10,10,0,0" >
+                            <TextBlock Style="{DynamicResource BaseText}">
+                                Lotka Volterra<LineBreak/>
+                                capacitive
+                            </TextBlock>
+                            <CheckBox.Resources>
+                                <SolidColorBrush x:Key="MaterialDesignCheckBoxOff" Color="White"/>
+                            </CheckBox.Resources>
+                        </CheckBox>
                     </StackPanel>
                 </Grid>
 
