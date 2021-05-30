@@ -59,7 +59,7 @@
                     <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Horizontal" >
                         <materialDesign:Card Style="{StaticResource TextBoxCard}">
                             <TextBox Width="100" Padding="2" x:Name="N" 
-                                     ToolTip="Enter the number of &#13;&#10;iterations of algorithm"/>
+                                     ToolTip="Enter the number of &#13;&#10;iterations of algorithm" Text="5000" SelectionOpacity="-2"/>
                         </materialDesign:Card>
                     </StackPanel>
 
@@ -71,7 +71,7 @@
                     <StackPanel Grid.Column="3" Grid.Row="0" Orientation="Horizontal" >
                         <materialDesign:Card Style="{StaticResource TextBoxCard}">
                             <TextBox Width="100" Padding="2" x:Name="r"
-                                     ToolTip="Enter the fertility &#13;&#10;rate of the victims"/>
+                                     ToolTip="Enter the fertility &#13;&#10;rate of the victims" Text="1.1"/>
                         </materialDesign:Card>
                     </StackPanel>
 
@@ -83,7 +83,7 @@
                     <StackPanel Grid.Column="5" Grid.Row="0" Orientation="Horizontal" >
                         <materialDesign:Card Style="{StaticResource TextBoxCard}">
                             <TextBox Width="100" Padding="2" x:Name="dt"
-                                     ToolTip="Enter dt parameter"/>
+                                     ToolTip="Enter dt parameter" Text="0.01"/>
                         </materialDesign:Card>
                     </StackPanel>
 
@@ -95,7 +95,7 @@
                     <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" >
                         <materialDesign:Card Style="{StaticResource TextBoxCard}">
                             <TextBox Width="100" Padding="2" x:Name="pk"
-                                     ToolTip="Enter a environmental&#13;&#10;capacity for the prey&#13;&#10;species"/>
+                                     ToolTip="Enter a environmental&#13;&#10;capacity for the prey&#13;&#10;species" Text="50"/>
                         </materialDesign:Card>
                     </StackPanel>
 
@@ -107,7 +107,7 @@
                     <StackPanel Grid.Column="3" Grid.Row="1" Orientation="Horizontal" >
                         <materialDesign:Card Style="{StaticResource TextBoxCard}">
                             <TextBox Width="100" Padding="2" x:Name="a"
-                                     ToolTip="Enter a hunting efficiency"/>
+                                     ToolTip="Enter a hunting efficiency" Text="0.4"/>
                         </materialDesign:Card>
                     </StackPanel>
 
@@ -119,7 +119,7 @@
                     <StackPanel Grid.Column="5" Grid.Row="1" Orientation="Horizontal" >
                         <materialDesign:Card Style="{StaticResource TextBoxCard}">
                             <TextBox Width="100" Padding="2" x:Name="ab"
-                                     ToolTip="Enter a part of the biomass&#13;&#10; for reproduction"/>
+                                     ToolTip="Enter a part of the biomass&#13;&#10; for reproduction" Text="4"/>
                         </materialDesign:Card>
                     </StackPanel>
 
@@ -131,7 +131,7 @@
                     <StackPanel Grid.Column="1" Grid.Row="2" Orientation="Horizontal" >
                         <materialDesign:Card Style="{StaticResource TextBoxCard}">
                             <TextBox Width="100" Padding="2" x:Name="s"
-                                     ToolTip="Enter a mortality in the&#13;&#10; predator popultaion"/>
+                                     ToolTip="Enter a mortality in the&#13;&#10; predator popultaion" Text="0.4"/>
                         </materialDesign:Card>
                     </StackPanel>
 
@@ -143,7 +143,7 @@
                     <StackPanel Grid.Column="3" Grid.Row="2" Orientation="Horizontal" >
                         <materialDesign:Card Style="{StaticResource TextBoxCard}">
                             <TextBox Width="100" Padding="2" x:Name="p0"
-                                     ToolTip="Enter number of predators&#13;&#10;at the beginning"/>
+                                     ToolTip="Enter number of predators&#13;&#10;at the beginning" Text="5"/>
                         </materialDesign:Card>
                     </StackPanel>
 
@@ -155,7 +155,7 @@
                     <StackPanel Grid.Column="5" Grid.Row="2" Orientation="Horizontal" >
                         <materialDesign:Card Style="{StaticResource TextBoxCard}">
                             <TextBox Width="100" Padding="2" x:Name="v0"
-                                     ToolTip="Enter a number of victims&#13;&#10;at the beginning"/>
+                                     ToolTip="Enter a number of victims&#13;&#10;at the beginning" Text="20"/>
                         </materialDesign:Card>
                     </StackPanel>
 
