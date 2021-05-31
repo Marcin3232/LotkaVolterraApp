@@ -45,11 +45,19 @@ namespace LotkaVolterraApp
         {
             Close();
         }
+        private int CreateFlag ()
+        {
+            int flag=0;
+            if (checkbox.IsChecked == true)
+                flag = 1;
+            return flag;
+        }
 
         private void RunPython()
         {
             PythonPath pythonPath = new PythonPath();
-            string fileName = $@"D:\Projekty_w_Realizacji\LotkaVoltera\Skrypt\MSIPBtest\main.py {s.Text} {a.Text} {ab.Text} {dt.Text} {r.Text} {N.Text} {v0.Text} {p0.Text} {pk.Text}";
+
+            string fileName = $@"D:\PYCHARM_PROJECTS\MSIPBtest\main.py {s.Text} {a.Text} {ab.Text} {dt.Text} {r.Text} {N.Text} {v0.Text} {p0.Text} {pk.Text} {CreateFlag()}";
             Process p = new Process();
             p.StartInfo = new ProcessStartInfo(pythonPath.GetPythonPath(), fileName)
             {
@@ -59,9 +67,7 @@ namespace LotkaVolterraApp
                 RedirectStandardError = true,
             };
             p.Start();
-
             string output = p.StandardOutput.ReadToEnd();
-            p.WaitForExit();
             StreamWriter st = new StreamWriter("log.txt", true);
             st.WriteLine("{0} Error: {1}", DateTime.Now, p.StandardError.ReadToEnd());
             st.Flush();
